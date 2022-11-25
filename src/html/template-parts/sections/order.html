@@ -3,8 +3,14 @@
         <h2>Level up</h2>
         <form class="form">
             <fieldset>
-                <input name="text" type="text" placeholder="Ваше имя" title="Введите Ваше имя">
-                <input class="phone" name="tel" type="tel" placeholder="Ваш телефон">
+                <div class="input-wrapper">
+                    <input name="text" type="text" placeholder="Ваше имя" title="Введите Ваше имя">
+                    <div class="note hidden">Введите Ваше имя</div>
+                </div>
+                <div class="input-wrapper">
+                    <input class="phone" name="tel" type="tel" placeholder="Ваш телефон">
+                    <div class="note hidden">Введите Ваш номер телефона</div>
+                </div>
             </fieldset>
             <button class="button">
                 Отправить

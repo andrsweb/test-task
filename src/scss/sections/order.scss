@@ -127,6 +127,12 @@
 		align-items: center;
 		margin-bottom: 50px;
 
+		.input-wrapper {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+
 		input {
 			width: 100%;
 			max-width: 600px;
@@ -152,6 +158,40 @@
 			align-items: center;
 			padding: 0;
 			margin: 0;
+		}
+	}
+
+	.input-wrapper {
+		position: relative;
+	}
+
+	.hidden {
+		display: none
+	}
+
+	.note {
+		position: absolute;
+		top: -20px;
+		right: 0;
+		background: $white;
+		border-radius: $border;
+		padding: 5px;
+		font-size: 10px;
+
+		@media all and (min-width: $sm) {
+			top: 0;
+		}
+
+		@media all and (min-width: $md) {
+			right: 10%;
+		}
+
+		@media all and (min-width: $lg) {
+			right: 20%;
+		}
+
+		@media all and (min-width: $xl) {
+			right: 25%;
 		}
 	}
 }
