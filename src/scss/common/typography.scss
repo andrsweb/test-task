@@ -5,14 +5,31 @@ h3, .h3 {
 	font-weight: $fw-bold;
 	line-height: $lh-title;
 	margin: 0;
+
+	&::selection {
+		background: $accent;
+		color: $white;
+	}
 }
 
 h1, .h1 {
+	font-family: $ff;
+	font-weight: $fw-bold;
 	font-size: 32px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 40px;
+	color: $white;
+
+	&::before {
+		content: "";
+		display: block;
+		background: $accent;
+		width: 100%;
+	}
 
 	@media all and (min-width: $lg) {
-		font-size: $fs-xl;
-		margin-bottom: 40px;
+		font-size: 60px;
 	}
 }
 
@@ -37,12 +54,17 @@ a {
 	color: $dark;
 
 	&:hover {
-		color: $accent;
+		color: $main;
 	}
 }
 
 p {
 	margin: 0;
+
+	&::selection {
+		background: $accent;
+		color: $white;
+	}
 }
 
 b, strong {

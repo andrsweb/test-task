@@ -10,3 +10,17 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Bai Jamjuree';
+    src: url('../fonts/BaiJamjuree-Bold.eot');
+    src: url('fonts/BaiJamjuree-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BaiJamjuree-Bold.woff2') format('woff2'),
+        url('../fonts/BaiJamjuree-Bold.woff') format('woff'),
+        url('../fonts/BaiJamjuree-Bold.ttf') format('truetype'),
+        url('../fonts/BaiJamjuree-Bold.svg#BaiJamjuree-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

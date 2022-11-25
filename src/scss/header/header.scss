@@ -1,13 +1,17 @@
 .header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
 	padding: 15px 0;
-	background: $main;
+	background: $dark;
+	transition: padding ease $tr,
+				box-shadow ease $tr;
+	z-index: 100;
 
 	&.scrolled {
-		position: fixed;
-		top: 0;
-		left: 0;
-		padding: 10px 0;
-		box-shadow: 1px 1px 1px $black;
+		padding: 12px 0;
+		box-shadow: 1px 1px 5px $black;
 	}
 
 	.container {
@@ -65,7 +69,7 @@
 			font-size: 15px;
 			text-transform: uppercase;
 			font-weight: $fw-bold;
-			color: $dark;
+			color: $white;
 			transition: scale ease $tr;
 
 			@media all and (min-width: $lg) {
@@ -77,7 +81,7 @@
 			}
 
 			span {
-				color: $accent;
+				color: $light;
 			}
 		}
 	}
@@ -99,12 +103,16 @@
 			flex-direction: column;
 			position: fixed;
 			justify-content: flex-start;
-			top: 78px;
+			top: 73px;
 			right: 0;
 			width: 100%;
 			background: $light;
 			border-bottom-left-radius: $border;
 			border-bottom-right-radius: $border;
+
+			@media all and (min-width: $m) {
+				top: 72px;
+			}
 
 			.header-nav {
 				flex-direction: column;
@@ -115,6 +123,12 @@
 
 				a {
 					animation: margin 1s forwards;
+					color: $dark;
+					transition: opacity ease $op;
+
+					&:hover {
+						opacity: $op;
+					}
 
 					@keyframes margin {
 						from { margin: 0;}
@@ -138,6 +152,7 @@
 		&-link {
 			margin-right: 20px;
 			font-size: 25px;
+			color: $white;
 
 			&:last-child {
 				margin-right: 0;

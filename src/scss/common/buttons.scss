@@ -7,13 +7,13 @@
 	font-size: 20px;
 	border: 0;
 	border-radius: $border;
-	background: $accent;
+	background: $main;
 	color: $white;
 	cursor: pointer;
-	transition: opacity ease $tr;
+	transition: background ease $tr;
 
 	&:hover {
-		opacity: $op;
+		background: $accent;
 	}
 
 	@media all and (min-width: $md) {
@@ -48,7 +48,7 @@
 		display: block;
 		width: 100%;
 		height: 4px;
-		background: $dark;
+		background: $main;
 
 		&::before {
 			content: "";
@@ -56,9 +56,9 @@
 			position: absolute;
 			top: 10px;
 			left: 0;
-			width: 100%;
+			width: 70%;
 			height: 4px;
-			background: $dark;
+			background: $main;
 		}
 
 		&::after {
@@ -69,7 +69,7 @@
 			left: 0;
 			width: 100%;
 			height: 4px;
-			background: $dark;
+			background: $main;
 		}
 	}
 
