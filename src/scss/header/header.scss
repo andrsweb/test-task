@@ -4,7 +4,7 @@
 	right: 0;
 	width: 100%;
 	padding: 15px 0;
-	background: $main;
+	background: $dark;
 	transition: padding ease $tr,
 				box-shadow ease $tr;
 	z-index: 100;
@@ -69,7 +69,7 @@
 			font-size: 15px;
 			text-transform: uppercase;
 			font-weight: $fw-bold;
-			color: $dark;
+			color: $white;
 			transition: scale ease $tr;
 
 			@media all and (min-width: $lg) {
@@ -81,7 +81,7 @@
 			}
 
 			span {
-				color: $accent;
+				color: $light;
 			}
 		}
 	}
@@ -142,6 +142,7 @@
 		&-link {
 			margin-right: 20px;
 			font-size: 25px;
+			color: $white;
 
 			&:last-child {
 				margin-right: 0;

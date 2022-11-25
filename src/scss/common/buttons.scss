@@ -7,13 +7,13 @@
 	font-size: 20px;
 	border: 0;
 	border-radius: $border;
-	background: $accent;
+	background: $main;
 	color: $white;
 	cursor: pointer;
-	transition: opacity ease $tr;
+	transition: background ease $tr;
 
 	&:hover {
-		opacity: $op;
+		background: $accent;
 	}
 
 	@media all and (min-width: $md) {

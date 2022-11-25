@@ -14,7 +14,7 @@ h1, .h1 {
 	text-transform: uppercase;
 	text-align: center;
 	margin-bottom: 40px;
-	color: $accent;
+	color: $white;
 
 	&::before {
 		content: "";
@@ -24,8 +24,7 @@ h1, .h1 {
 	}
 
 	@media all and (min-width: $lg) {
-		font-size: $fs-xl;
-		margin-bottom: 80px;
+		font-size: 60px;
 	}
 }
 
@@ -50,7 +49,7 @@ a {
 	color: $dark;
 
 	&:hover {
-		color: $accent;
+		color: $main;
 	}
 }
 
