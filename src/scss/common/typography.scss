@@ -5,6 +5,11 @@ h3, .h3 {
 	font-weight: $fw-bold;
 	line-height: $lh-title;
 	margin: 0;
+
+	&::selection {
+		background: $accent;
+		color: $white;
+	}
 }
 
 h1, .h1 {
@@ -55,6 +60,11 @@ a {
 
 p {
 	margin: 0;
+
+	&::selection {
+		background: $accent;
+		color: $white;
+	}
 }
 
 b, strong {

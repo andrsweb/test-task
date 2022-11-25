@@ -103,12 +103,16 @@
 			flex-direction: column;
 			position: fixed;
 			justify-content: flex-start;
-			top: 78px;
+			top: 73px;
 			right: 0;
 			width: 100%;
 			background: $light;
 			border-bottom-left-radius: $border;
 			border-bottom-right-radius: $border;
+
+			@media all and (min-width: $m) {
+				top: 72px;
+			}
 
 			.header-nav {
 				flex-direction: column;
@@ -119,6 +123,12 @@
 
 				a {
 					animation: margin 1s forwards;
+					color: $dark;
+					transition: opacity ease $op;
+
+					&:hover {
+						opacity: $op;
+					}
 
 					@keyframes margin {
 						from { margin: 0;}
