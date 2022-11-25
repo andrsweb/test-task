@@ -10,6 +10,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 const toogleBurgerMenu = () => {
 	const burgerButton = document.querySelector( '.burger-button' )
 	const headerInner  = document.querySelector( '.header-inner' )
+	const links        = document.querySelectorAll( '.link-for-scrolling' )
 	setTargetElement( document.querySelector( '#body-lock' ) )
 
 	if( ! burgerButton && ! headerInner ) return
@@ -51,4 +52,14 @@ const toogleBurgerMenu = () => {
 			enableBodyScroll( getTargetElement() )
         }
     } )
+
+	links.forEach( link => {
+		link.addEventListener( 'click', () => {
+			if( headerInner.classList.contains( 'opened' ) ) {
+				headerInner.classList.remove( 'opened' )
+				burgerButton.classList.remove( 'opened' )
+				enableBodyScroll( getTargetElement() )
+			}
+		} )
+	} )
 }

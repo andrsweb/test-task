@@ -11,6 +11,7 @@
 	color: $white;
 	cursor: pointer;
 	transition: background ease $tr;
+	text-align: center;
 
 	&:hover {
 		background: $accent;
