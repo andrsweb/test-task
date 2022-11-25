@@ -1,0 +1,174 @@
+.header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	padding: 15px 0;
+	background: $dark;
+	transition: padding ease $tr,
+				box-shadow ease $tr;
+	z-index: 100;
+
+	&.scrolled {
+		padding: 12px 0;
+		box-shadow: 1px 1px 5px $black;
+	}
+
+	.container {
+		max-width: 1200px;
+	}
+
+	&-wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&-ui {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+
+		@media all and (min-width: $md) {
+			width: 10%;
+		}
+	}
+
+	&-logo {
+		border-radius: $border;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+
+			img {
+				opacity: $op;
+			}
+
+			.header-logo-text {
+				scale: 1.05;
+			}
+		}
+
+		img {
+			transition: opacity ease $tr;
+			max-width: 50%;
+			margin: 0 auto;
+
+			@media all and (min-width: $lg) {
+				max-width: 100%;
+			}
+		}
+
+		&-text {
+			font-family: $ff;
+			font-size: 15px;
+			text-transform: uppercase;
+			font-weight: $fw-bold;
+			color: $white;
+			transition: scale ease $tr;
+
+			@media all and (min-width: $lg) {
+				font-size: 18px;
+			}
+
+			@media all and (min-width: $xl) {
+				font-size: 24px;
+			}
+
+			span {
+				color: $light;
+			}
+		}
+	}
+
+	&-inner {
+		width: 100%;
+		display: none;
+		justify-content: space-between;
+		align-items: center;
+
+		@media all and (min-width: $md) {
+			width: 90%;
+			display: flex;
+		}
+
+		&.opened {
+			padding: 20px 0;
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			justify-content: flex-start;
+			top: 73px;
+			right: 0;
+			width: 100%;
+			background: $light;
+			border-bottom-left-radius: $border;
+			border-bottom-right-radius: $border;
+
+			@media all and (min-width: $m) {
+				top: 72px;
+			}
+
+			.header-nav {
+				flex-direction: column;
+				align-items: center;
+				padding: 0;
+				margin-bottom: 40px;
+				opacity: 1;
+
+				a {
+					animation: margin 1s forwards;
+					color: $dark;
+					transition: opacity ease $op;
+
+					&:hover {
+						opacity: $op;
+					}
+
+					@keyframes margin {
+						from { margin: 0;}
+						to { margin: 0 0 20px 0;}
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&-nav {
+		display: flex;
+		justify-content: flex-start;
+		width: calc( 100% - 220px);
+		padding-left: 80px;
+
+		&-link {
+			margin-right: 20px;
+			font-size: 25px;
+			color: $white;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			@media all and (min-width: $md) {
+				font-size: 15px;
+			}
+
+			@media all and (min-width: $lg) {
+				font-size: 20px;
+			}
+
+			@media all and (min-width: $xl) {
+				font-size: 25px;
+			}
+		}
+	}
+}

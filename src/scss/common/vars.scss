@@ -1,6 +1,7 @@
 // Grid.
 $xs	: 375px;
 $sm	: 480px;
+$m	: 576px;
 $md	: 768px;
 $lg	: 992px;
 $xl	: 1200px;
@@ -15,15 +16,14 @@ $container-xl: 1200px;
 $container-padding: 24px;
 
 // Font families.
-$ff			: Arial, sans-serif;
-$ff-title	: Arial, sans-serif;
+$ff: 'Bai Jamjuree', sans-serif;
 
 // Font sizes.
-$fs-xs	: 12px;
-$fs-sm	: 14px;
-$fs-md	: 16px;
-$fs-lg	: 18px;
-$fs-xl	: 20px;
+$fs-xs	: 14px;
+$fs-sm	: 20px;
+$fs-md	: 24px;
+$fs-lg	: 30px;
+$fs-xl	: 40px;
 
 // Font weights.
 $fw-light	: 300;
@@ -39,6 +39,13 @@ $lh-title	: 1.3;
 // Colors.
 $white	: #FFFFFF;
 $black	: #000000;
+$accent : #64205f;
+$main   : #cc9d36;
+$dark   : #2E4057;
+$light  : #aee4ee;
+$foot   : #f16d44;
 
 // Others.
-$tr: 0.35s;
+$tr    : 0.35s;
+$op    : 0.75;
+$border: 10px;

@@ -1,0 +1,144 @@
+.hero {
+	position: relative;
+	padding: 120px 0 30px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 10px;
+		z-index: 50;
+		background: linear-gradient(to top, #af28ca36, transparent);
+	}
+
+	@media all and (min-width: $lg) {
+		padding: 150px 0 50px;
+	}
+
+	.container {
+		max-width: 1200px;
+	}
+
+	&-wrapper {
+		position: relative;
+		z-index: 1;
+	}
+
+	&-inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		z-index: 100;
+	}
+
+	&-img {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 50px;
+
+		@media all and (min-width: $m) {
+			width: 50%;
+			justify-content: flex-start;
+			margin-bottom: 0;
+		}
+
+		img {
+			max-width: 50%;
+			margin: 0 auto;
+
+			@media all and (min-width: $m) {
+				max-width: 70%;
+			}
+
+			@media all and (min-width: $md) {
+				max-width: 80%;
+			}
+
+			@media all and (min-width: $lg) {
+				max-width: 100%;
+				margin: 0;
+			}
+
+			@media all and (min-width: $md) {
+				animation: shake 4.5s infinite;
+
+				@keyframes shake {
+					0% { transform: rotate(0deg); }
+					80% { transform: rotate(0deg); }
+					85% { transform: rotate(3deg); }
+					95% { transform: rotate(-3deg); }
+					100% { transform: rotate(0deg); }
+				}
+			}
+		}
+	}
+
+	&-list {
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		background: $white;
+		border-radius: $border;
+		box-shadow: 1px 1px 10px 5px $accent;
+
+		@media all and (min-width: $m) {
+			width: 50%;
+			justify-content: flex-end;
+		}
+
+		&-item {
+			font-size: 15px;
+			margin-bottom: 30px;
+			position: relative;
+			padding-left: 20px;
+
+			@media all and (min-width: $xl) {
+				font-size: 20px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY( -50% );
+				width: 10px;
+				height: 10px;
+				background: $accent;
+			}
+		}
+	}
+
+	.button {
+		margin: 20px auto 0 auto;
+	}
+
+	&-video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		z-index: 1;
+		width: 100%;
+		height:100%;
+
+		video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
