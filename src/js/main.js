@@ -11,3 +11,6 @@ import './count'
 
 //Form JS
 import './form'
+
+//Smooth anchors
+import './smoothAnchors'

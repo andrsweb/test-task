@@ -26,7 +26,7 @@
 		justify-content: center;
 		padding: 20px 0;
 		margin: auto 0;
-		border-radius: 4px;
+		border-radius: $border;
 		background: $white;
 		box-shadow: 4px 3px 20px -1px rgba(190, 188, 188, 0.54);
 	}
@@ -62,7 +62,7 @@
 		height: 38px;
 		width: 100%;
 		margin-bottom: 15px;
-		border-radius: 4px;
+		border-radius: $border;
 		border: 1px solid #ced4da;
 		padding-left: 10px;
 		transition: box-shadow ease $tr;
@@ -88,6 +88,7 @@
 		min-height: 100px;
 		resize: none;
 		border: 1px solid #ced4da;
+		border-radius: $border;
 		padding-left: 10px;
 		transition: box-shadow ease $tr;
 		color: #495057;
