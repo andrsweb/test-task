@@ -1,13 +1,17 @@
 .header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
 	padding: 15px 0;
 	background: $main;
+	transition: padding ease $tr,
+				box-shadow ease $tr;
+	z-index: 100;
 
 	&.scrolled {
-		position: fixed;
-		top: 0;
-		left: 0;
-		padding: 10px 0;
-		box-shadow: 1px 1px 1px $black;
+		padding: 12px 0;
+		box-shadow: 1px 1px 5px $black;
 	}
 
 	.container {
