@@ -24,6 +24,23 @@ const testimonialsSwiper = () => {
 		scrollbar: {
 			el: '.swiper-scrollbar',
 			draggable: 1
+		},
+
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+
+			576: {
+			slidesPerView: 2,
+			spaceBetween: 40
+			},
+
+			993: {
+				slidesPerView: 3,
+				spaceBetween: 50
+				}
 		}
 	} )
 }
