@@ -67,6 +67,13 @@ p {
 	}
 }
 
+div, span {
+	&::selection {
+		background: $accent;
+		color: $white;
+	}
+}
+
 b, strong {
 	font-weight: $fw-bold
 }
