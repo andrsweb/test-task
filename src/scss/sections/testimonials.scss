@@ -1,0 +1,50 @@
+.testimonials {
+    padding: 50px 0;
+    background: linear-gradient(180deg, #aee4ee, #64205f);
+
+    &-wrapper {
+        display: flex;
+        padding-bottom: 50px;
+    }
+
+    &-slides {
+        display: flex;
+    }
+
+    &-slide {
+
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        &-img {
+            margin-bottom: 20px;
+        }
+
+        &-name {
+            color: $white;
+            margin-bottom: 10px;
+        }
+
+        &-text {
+            text-align: center;
+            font-size: 15px;
+            color: $light;
+            min-height: 100px;
+        }
+    }
+
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+        height: 15px;
+        bottom: 0;
+        background: $light;
+    }
+
+    .swiper-scrollbar-drag {
+        background: $main;
+    }
+}
