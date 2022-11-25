@@ -1,0 +1,20 @@
+.button {
+    width: 100%;
+    max-width: 220px;
+    font-family: $ff;
+    font-weight: $fw-bold;
+    padding: 8px 30px;
+    font-size: 20px;
+    border: 0;
+    border-radius: $border;
+    background: $accent;
+    color: $white;
+    cursor: pointer;
+    transition: opacity ease $tr;
+
+    &:hover {
+        opacity: $op;
+    }
+}
+
+.burger-button {}

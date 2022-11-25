@@ -1,0 +1,77 @@
+.header {
+    padding: 15px 0;
+    background: $main;
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &-ui {
+        width: 10%;
+    }
+
+    &-logo {
+        border-radius: $border;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+
+            img {
+                opacity: $op;
+            }
+
+            .header-logo-text {
+                scale: 1.05;
+            }
+        }
+
+        img {
+            transition: opacity ease $tr;
+        }
+
+        &-text {
+            font-family: $ff;
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: $fw-bold;
+            color: $dark;
+            transition: scale ease $tr;
+
+            span {
+                color: $accent;
+            }
+        }
+    }
+
+    &-inner {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-nav {
+        display: flex;
+        justify-content: flex-start;
+        width: calc( 100% - 220px);
+        padding-left: 80px;
+
+        &-link {
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
