@@ -6,6 +6,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 	onlyNumInput()
 	formOnClick()
+	inputNotes()
 } )
 
 const onlyNumInput = () => {
@@ -19,19 +20,21 @@ const onlyNumInput = () => {
 
 const formOnClick = () => {
 	const formWrapper = document.querySelector( '.form-wrapper' ) //open form by button click and body scroll-lock
-	const formButton  = document.querySelector( '.open-form' )
+	const formButton  = document.querySelectorAll( '.open-form' )
 	setTargetElement( document.querySelector( '#form-lock' ) )
 
 	if ( ! formWrapper && ! formButton ) return
 
-	formButton.addEventListener( 'click', () => {
-		if ( ! formWrapper.classList.contains( 'opened' ) ) {
-			disableBodyScroll( getTargetElement() )
-			formWrapper.classList.add( 'opened' )
-		} else {
-			formWrapper.classList.remove( 'opened' )
-			enableBodyScroll( getTargetElement() )
-		}
+	formButton.forEach( button => {
+		button.addEventListener( 'click', () => {
+			if ( ! formWrapper.classList.contains( 'opened' ) ) {
+				disableBodyScroll( getTargetElement() )
+				formWrapper.classList.add( 'opened' )
+			} else {
+				formWrapper.classList.remove( 'opened' )
+				enableBodyScroll( getTargetElement() )
+			}
+		} )
 	} )
 
 	formWrapper.addEventListener( 'click', e => {  //close for for touch anywhere
@@ -46,9 +49,9 @@ const formOnClick = () => {
     } )
 }
 
-document.addEventListener( 'DOMContentLoaded', () => {
+const inputNotes = () => {
 	const form   = document.querySelector( 'form' )
-	const wraps  = form.querySelectorAll( '.input-wrapper' )
+	const wraps  = form.querySelectorAll( '.input-wrapper' )						//calling input notes by focus
 
 	wraps.forEach( wrap => {
 		const input  = wrap.querySelector( 'input' ),
@@ -62,6 +65,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			if( ! note.classList.contains( 'hidden' ) ) note.classList.add( 'hidden' )
 		} )
 	} )
-} )
+}
+
 
 
