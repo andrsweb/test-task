@@ -1,5 +1,5 @@
 .structure {
-	padding: 50px 0;
+	padding: 30px 0;
 	background: linear-gradient(180deg,#64205f,#aee4ee);
 	position: relative;
 
@@ -14,16 +14,29 @@
 		background: linear-gradient(to bottom, #d380e4a9, transparent);
 	}
 
+	@media all and (min-width: $md) {
+		padding: 50px 0 ;
+	}
+
 	.container {
 		max-width: 1200px;
 	}
 
 	h2 {
-		margin-bottom: 100px;
+		margin-bottom: 40px;
+
+		@media all and (min-width: $m) {
+			margin-bottom: 70px;
+		}
+
+		@media all and (min-width: $lg) {
+			margin-bottom: 100px;
+		}
 	}
 
 	&-wrapper {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		width: 100%;
 		margin-bottom: 30px;
@@ -35,7 +48,11 @@
 		align-items: center;
 
 		&:first-child {
-			width: 25%;
+			width: 100%;
+
+			@media all and (min-width: $md) {
+				width: 25%;
+			}
 
 			.structure-img {
 				margin-bottom: 10px;
@@ -43,11 +60,20 @@
 		}
 
 		&:nth-child(2) {
-			width: 50%;
+			width: 100%;
+			margin-bottom: 40px;
+
+			@media all and (min-width: $md) {
+				width: 50%;
+			}
 		}
 
 		&:last-child {
-			width: 25%;
+			width: 100%;
+
+			@media all and (min-width: $md) {
+				width: 25%;
+			}
 
 			.structure-img {
 				margin-bottom: 10px;
@@ -59,12 +85,31 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			margin-bottom: 40px;
+			margin: 0 0 40px 0;
+			padding: 10px;
+			width: 100%;
+
+			@media all and (min-width: $m) {
+				width: 33.333%;
+			}
+
+			@media all and (min-width: $md) {
+				width: 100%;
+				margin: 0 0 40px 0
+			}
 		}
 
-		&-inner {
+		&-wrapper {
 			display: flex;
 			flex-direction: column;
+
+			@media all and (min-width: $m) {
+				flex-direction: row;
+			}
+
+			@media all and (min-width: $md) {
+				flex-direction: column;
+			}
 		}
 	}
 
@@ -74,14 +119,34 @@
 		align-items: center;
 		background: $white;
 		border-radius: 50%;
-		width: 150px;
-		height: 150px;
+		width: 100px;
+		height: 100px;
+
+		@media all and (min-width: $md) {
+			width: 150px;
+			height: 150px;
+		}
 
 		&-text {
 			font-family: $ff;
 			font-weight: $fw-bold;
 			text-align: center;
-			color: $accent;
+			color: $white;
+			font-size: 18px;
+
+			@media all and (min-width: $lg) {
+				font-size: 20px;
+			}
+		}
+
+		img {
+			max-width: 70%;
+			margin: 0 auto;
+
+			@media all and (min-width: $md) {
+				max-width: 100%;
+				margin: 0;
+			}
 		}
 	}
 
