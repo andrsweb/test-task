@@ -17,10 +17,6 @@
 		padding: 150px 0 50px;
 	}
 
-	@media all and (min-width: $xl) {
-		padding: 200px 0 50px;
-	}
-
 	.container {
 		max-width: 1200px;
 	}
@@ -96,7 +92,7 @@
 		}
 
 		&-item {
-			font-size: 15px; //
+			font-size: 15px;
 			margin-bottom: 30px;
 			position: relative;
 			padding-left: 20px;
