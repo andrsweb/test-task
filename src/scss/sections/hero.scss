@@ -91,6 +91,12 @@
 			justify-content: flex-end;
 		}
 
+		&-button {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+
 		&-item {
 			font-size: 15px;
 			margin-bottom: 30px;
